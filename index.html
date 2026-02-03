@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMPUGUED | Tecnología</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<!--ESTILO CELULAR -->  
+<div class="phone">
+
+<!--WIDGET CLIMA -->  
+  <div class="top-bar">
+    <div class="weather-wrap">
+      <div class="weather" id="weather">
+        <i class="fas fa-spinner fa-spin"></i>
+        <div class="info">
+          <span class="temp">--°C</span>
+        </div>
+      </div>
+      <div class="city">Chiclayo</div>
+    <div class="weather-text" id="weatherText">---</div>
+
+    </div>
+
+    <button class="icon-btn" onclick="sharePage()">
+      <!-- <i class="fas fa-share-alt"></i> -->
+       <i class="fa-solid fa-share-from-square"></i>
+      
+    </button>
+  </div>
+<!--FIN WIDGET CLIMA -->  
+
+<div class="header">
+    <img src="img/logo/logofondoazul.png" class="avatar">
+    <h1>COMPUGUED</h1>
+    <p>VENTA Y ASESORÍA DE LAPTOPS, COMPUTADORAS Y ACCESORIOS TECNOLÓGICOS</p>
+
+<!-- REDES SOCIALES -->
+    <div class="social">
+        <!-- Instagram -->
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10z"/></svg></a>
+        <!-- Facebook -->
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V2h-3c-3 0-5 2-5 5v3H7v4h2v8h4z"/></svg></a>
+        <!-- YouTube -->
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M23 12s0-4-1-5-5-1-10-1-9 0-10 1-1 5-1 5 0 4 1 5 5 1 10 1 9 0 10-1 1-5 1-5zm-13 3V9l6 3-6 3z"/></svg></a>
+    </div>
+</div>
+<!-- FIN REDES SOCIALES -->
+
+<div class="container">
+  <!-- SLIDER -->
+  <div class="slider">
+    <button class="nav prev">&#10094;</button>
+
+    <div class="slider-window">
+      <div class="slider-track">
+        <img src="img/slider/1.jpg">
+        <img src="img/slider/2.jpg">
+        <img src="img/slider/3.jpg">
+        <img src="img/slider/4.jpg">
+        <img src="img/slider/5.jpg">
+        
+      </div>
+    </div>
+
+    <button class="nav next">&#10095;</button>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- DOBLE BOTON PDF + WTZ -->
+<div class="actions">
+    <a href="catalogo.pdf" class="action btn">
+    <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zm8 7h5l-5-5v5z"/></svg>
+    <span>CATÁLOGO PDF</span>
+    </a>
+
+    <a href="https://wa.me/51982846127" class="action">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.94 14.5L2 22l5.7-1.5A10 10 0 1012 2zm5 14c-.2.6-1.2 1-1.7 1s-1.1.1-3.7-1-4.3-3.8-4.5-4.1-.8-1-.8-1.7.4-1 .6-1.3.5-.4.7-.4.4 0 .6.1l.8 1.9c.1.2.1.5 0 .6-.1.2-.2.3-.4.5-.2.2-.4.3-.2.6s.9 1.5 2 2.4 2.1 1.2 2.4 1.4.5.1.7-.1.8-.9 1-1.2.4-.3.6-.2l2.2 1c.3.2.6.3.7.5z"/></svg>
+    <span>CONSULTAR</span>
+    </a>
+</div>
+<!-- DOBLE BOTON PDF + WTZ -->
+<footer>
+    Calle 7 de enero 1299 – Chiclayo<br>
+    📞 926 845 127
+  </footer>
+</div>
+<!--FIN ESTILO CELULAR -->
+
+ 
+
+
+<!-- ENLACE JS -->
+<script src="js/app.js"></script>
+<!-- FIN ENLACE JS -->
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+ :root{
+      --bg:#0e0f13;
+      --card:rgba(22,24,33,.9);
+      --text:#eaeaf0;
+      --muted:#9ca3af;
+      --primary:#25d366;
+      --accent:#4f46e5;
+    }
+
+*{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    margin:0;
+    background:linear-gradient(160deg,#1a1f3c,#0b0f24);
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    color:var(--text);
+
+    /* control fondo imagen; */
+    /* background-image: url("../img/fondo/f4.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* FIN control fondo imagen; */
+}
+
+.phone{ /*toda la estructura*/
+    width:100%;
+    max-width:380px;
+    /* background:#15c40f; color fondo verde*/
+    /* border-radius:35px; */
+    overflow:hidden;
+    /* box-shadow:0 30px 70px rgba(187, 184, 184, 0.45); */
+     /*color sombra borde*/
+     /* background-color: rgb(228, 61, 219); */
+}
+
+/* ===== HEADER ===== */
+.header{
+    /* background:linear-gradient(135deg,#2b2f77,#ffa963); 2 colores fondo encabezado phone  */
+    /* padding:30px 20px 80px; Clave para responsiva */
+    padding: 20px;
+    text-align:center;
+    color:#ffffff;
+}
+
+.avatar{ /*Control Logo*/
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    /* border:4px solid #fff; */
+    border: none;
+    object-fit: cover;
+}
+
+.header h1{ /*Texto COMPUGUED*/
+    margin:8px 0 4px;
+    font-size: 22px;
+}
+
+.header p{ /*Descripcion Breve*/
+    font-size: 14px;
+    font-weight: bold;
+    /* opacity:.9; */
+}
+/* FIN HEADER ===== */
+
+/* ===== SOCIAL ===== */
+.social{ /*Control bloque Redes sociales*/
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    /* background:rgba(255,255,255,.15); */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.social a:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,.3);
+}
+
+.social svg{
+    width:20px;
+    fill:#fff;
+}
+/* FIN SOCIAL ===== */
+
+/* 2 BOTONES ACTIONS  ===== */
+.actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    padding:15px 20px 30px;
+}
+
+.action{
+    background:blue;
+    color:#fff;
+    text-decoration:none;
+    border-radius:18px;
+    padding:16px 10px;
+    text-align:center;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s;
+    border: 2px solid #ffffff; /* grosor | estilo | color */
+}
+
+.action:hover{
+    background:#2563eb;
+    transform:translateY(-4px);
+    box-shadow:0 12px 22px rgba(0,0,0,.25);
+}
+
+.action svg{
+    width:26px;
+    fill:#fff;
+    margin-bottom:6px;
+}
+
+.action span{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+}
+
+
+/* BOTON-VIBRACION */
+.btn { 
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: color 350ms ease-in-out, background-color 350ms ease-in-out;
+    animation: bouncy 3s infinite linear;
+}
+
+@keyframes bouncy {
+    0%, 40% { top: 0px; }
+    43% { top: -15px; }
+    46% { top: 0px; }
+    48% { top: -7px; }
+    50% { top: 0px; }
+    100% { top: 0px; }
+}
+/* FIN BOTON-VIBRACION */
+
+
+/* FIN ACTIONS ===== */
+
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:768px){
+    .phone{
+        max-width:420px;
+    }
+}
+
+@media(min-width:1600px){
+    body{
+        padding:40px;
+    }
+}
+
+
+
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  margin-top: 0;
+}
+
+.slider-window {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider-track img {
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+/* FLECHAS */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: transparent;
+  cursor: pointer;
+}
+
+.prev { left: -5px; }
+.next { right: -5px; }
+
+
+
+
+
+
+
+
+
+
+    /* TOP BAR */
+    .top-bar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom:16px;
+    }
+
+    /* WEATHER */
+    .weather-wrap{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    .weather{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:linear-gradient(135deg,#1e293b,#0f172a);
+      padding:10px 14px;
+      border-radius:14px;
+      box-shadow:0 8px 22px rgba(0,0,0,.4);
+      animation:float 3s ease-in-out infinite;
+      font-size:14px;
+    }
+
+    .weather i{
+      font-size:22px;
+    }
+
+    .weather .temp{
+      font-weight:600;
+    }
+
+    .city{
+      margin-top:4px;
+      font-size:12px;
+      color:var(--muted);
+      padding-left:6px;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-3px)}
+    }
+
+    .icon-btn{
+      background:var(--card);
+      border:none;
+      color:var(--text);
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+    }
+
+
+
+
+    /* WEATHER TEXT */
+.weather-text{
+  font-size:12px;
+  color:var(--muted);
+  padding-left:6px;
+  margin-top:2px;
+}
+
+/* ANIMATIONS */
+.sunny{
+  animation:pulse 2.5s ease-in-out infinite;
+}
+
+.cloudy{
+  animation:float 4s ease-in-out infinite;
+}
+
+.rainy{
+  animation:rainMove 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+}
+
+@keyframes rainMove{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(3px)}
+}
+
+
+    footer{
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.6;
+    }
