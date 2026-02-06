@@ -298,8 +298,8 @@ body{
       background:var(--card);
       border-radius: 1rem;
       color:var(--text);
-      width:45px;
-      height:45px;
+      width:35px;
+      height:35px;
       border-radius:12px;
       cursor:pointer;
       display:flex;
@@ -309,7 +309,7 @@ body{
     }
 
   .icon-btn i{
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
 
@@ -345,17 +345,17 @@ body{
 }
 
 
-    footer{
+    /* footer{
       text-align:center;
       font-size:17px;
       color:var(--text);
       line-height:1.6;
-    }
+    } */
 
 
 
     .share-buttons{
   display:flex;
   flex-direction:column;
-  gap:10px; /* separación entre botones */
+  gap:5px; /* separación entre botones */
 }
