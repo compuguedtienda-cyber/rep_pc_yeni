@@ -191,8 +191,6 @@ body{
 }
 
 
-
-
 .container {
   max-width: 420px;
   margin: auto;
@@ -353,3 +351,11 @@ body{
       color:var(--text);
       line-height:1.6;
     }
+
+
+
+    .share-buttons{
+  display:flex;
+  flex-direction:column;
+  gap:10px; /* separación entre botones */
+}
