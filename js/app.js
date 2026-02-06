@@ -169,35 +169,43 @@ function updateWeather(){
   fetch(WEATHER_API)
     .then(r => r.json())
     .then(d => {
-      const t = Math.round(d.current_weather.temperature);
-      const c = d.current_weather.weathercode;
+      const w = d.current_weather;
+      const t = Math.round(w.temperature);
+      const c = w.weathercode;
+      const isDay = w.is_day === 1;
 
-      const h = new Date().getHours();
-      const night = h >= 18 || h < 6;
+      let icon, color, text, animClass;
 
-      let icon = 'fa-cloud';
-      let color = '#94a3b8';
-      let text = 'Nublado';
-      let animClass = 'cloudy';
-
-      // Reset animaciones
       weatherBox.classList.remove('sunny','cloudy','rainy');
 
-      // Soleado
-      if (c === 0) {
-        icon = night ? 'fa-moon' : 'fa-sun';
-        color = night ? '#cbd5f5' : '#facc15';
+      /* ☀️ SOLEADO REAL (Chiclayo fix) */
+      if (isDay && t >= 22 && c <= 3) {
+        icon = 'fa-sun';
+        color = '#facc15';
         text = 'Soleado';
         animClass = 'sunny';
       }
-      // Lluvia
-      else if ([61,63,65,80,81,82].includes(c)) {
+
+      /* 🌙 NOCHE */
+      else if (!isDay) {
+        icon = 'fa-moon';
+        color = '#cbd5f5';
+        text = 'Noche';
+        animClass = 'cloudy';
+      }
+
+      /* 🌧️ LLUVIA */
+      else if (
+        (c >= 51 && c <= 65) ||
+        (c >= 80 && c <= 82)
+      ) {
         icon = 'fa-cloud-rain';
         color = '#60a5fa';
         text = 'Lluvia';
         animClass = 'rainy';
       }
-      // Nublado / otros
+
+      /* ☁️ NUBLADO */
       else {
         icon = 'fa-cloud';
         color = '#94a3b8';
@@ -207,10 +215,7 @@ function updateWeather(){
 
       iconEl.className = `fas ${icon}`;
       iconEl.style.color = color;
-
-      // 👇 Espacio antes de °C
       tempEl.textContent = `${t} °C`;
-
       weatherTextEl.textContent = text;
       weatherBox.classList.add(animClass);
     })
@@ -219,6 +224,7 @@ function updateWeather(){
       weatherTextEl.textContent = 'Clima no disponible';
     });
 }
+
 
 /* Carga inicial */
 updateWeather();
