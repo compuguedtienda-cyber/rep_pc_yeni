@@ -182,7 +182,7 @@ function updateWeather(){
       if (isDay && t >= 22 && c <= 3) {
         icon = 'fa-sun';
         color = '#facc15';
-        // text = 'Soleado';
+        text = 'Soleado';
         animClass = 'sunny';
       }
 
@@ -190,7 +190,7 @@ function updateWeather(){
       else if (!isDay) {
         icon = 'fa-moon';
         color = '#cbd5f5';
-        // text = 'Noche';
+        text = 'Noche';
         animClass = 'cloudy';
       }
 
@@ -201,7 +201,7 @@ function updateWeather(){
       ) {
         icon = 'fa-cloud-rain';
         color = '#60a5fa';
-        // text = 'Lluvia';
+        text = 'Lluvia';
         animClass = 'rainy';
       }
 
@@ -209,7 +209,7 @@ function updateWeather(){
       else {
         icon = 'fa-cloud';
         color = '#94a3b8';
-        // text = 'Nublado';
+        text = 'Nublado';
         animClass = 'cloudy';
       }
 
