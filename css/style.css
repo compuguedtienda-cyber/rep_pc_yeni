@@ -365,5 +365,5 @@ body{
     .share-buttons{
   display:flex;
   flex-direction:column;
-  gap:5px; /* separación entre botones */
+  gap:10px; /* separación entre botones */
 }
