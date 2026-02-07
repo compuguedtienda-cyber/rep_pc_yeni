@@ -160,10 +160,17 @@ function copyLink(){
 const tempEl = document.querySelector('.temp');
 const iconEl = document.querySelector('.weather i');
 const weatherTextEl = document.getElementById('weatherText');
-const weatherBox = document.getElementById('weather');
 
 const WEATHER_API =
   'https://api.open-meteo.com/v1/forecast?latitude=-6.7714&longitude=-79.8409&current_weather=true';
+
+function getPeriodoChiclayo() {
+  const hora = new Date().getHours(); // hora local del navegador (Perú)
+
+  if (hora >= 6 && hora < 12) return 'Día';
+  if (hora >= 12 && hora < 19) return 'Tarde';
+  return 'Noche';
+}
 
 function updateWeather(){
   fetch(WEATHER_API)
@@ -171,60 +178,21 @@ function updateWeather(){
     .then(d => {
       const w = d.current_weather;
       const t = Math.round(w.temperature);
-      const c = w.weathercode;
-      const isDay = w.is_day === 1;
 
-      let icon, color, text, animClass;
+      /* Icono fijo: termómetro */
+      iconEl.className = 'fas fa-temperature-low thermo';
 
-      weatherBox.classList.remove('sunny','cloudy','rainy');
+      iconEl.style.color = '#c7d6e9'; 
 
-      /* ☀️ SOLEADO REAL (Chiclayo fix) */
-      if (isDay && t >= 22 && c <= 3) {
-        icon = 'fa-sun';
-        color = '#facc15';
-        text = 'Soleado';
-        animClass = 'sunny';
-      }
 
-      /* 🌙 NOCHE */
-      else if (!isDay) {
-        icon = 'fa-moon';
-        color = '#cbd5f5';
-        text = 'Noche';
-        animClass = 'cloudy';
-      }
-
-      /* 🌧️ LLUVIA */
-      else if (
-        (c >= 51 && c <= 65) ||
-        (c >= 80 && c <= 82)
-      ) {
-        icon = 'fa-cloud-rain';
-        color = '#60a5fa';
-        text = 'Lluvia';
-        animClass = 'rainy';
-      }
-
-      /* ☁️ NUBLADO */
-      else {
-        icon = 'fa-cloud';
-        color = '#94a3b8';
-        text = 'Nublado';
-        animClass = 'cloudy';
-      }
-
-      iconEl.className = `fas ${icon}`;
-      iconEl.style.color = color;
       tempEl.textContent = `${t} °C`;
-      weatherTextEl.textContent = text;
-      weatherBox.classList.add(animClass);
+      weatherTextEl.textContent = getPeriodoChiclayo();
     })
     .catch(() => {
       tempEl.textContent = '-- °C';
-      weatherTextEl.textContent = 'Clima no disponible';
+      weatherTextEl.textContent = 'No disponible';
     });
 }
-
 
 /* Carga inicial */
 updateWeather();

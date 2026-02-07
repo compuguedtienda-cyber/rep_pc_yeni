@@ -367,3 +367,17 @@ body{
   flex-direction:column;
   gap:10px; /* separación entre botones */
 }
+
+
+
+
+/* TERMÓMETRO ANIMADO */
+.thermo {
+  animation: thermoPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes thermoPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
