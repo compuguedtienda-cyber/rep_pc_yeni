@@ -209,8 +209,7 @@ body{
   height: 195px;
   overflow: hidden;
   background: #fff;
-  border-radius: 15px;
-  border: 2px solid #4441d4; /* grosor | estilo | color */
+  border-radius: 10px;
 }
 
 .slider-track {
