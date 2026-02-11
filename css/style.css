@@ -21,7 +21,7 @@ body{
     color:var(--text);
 
     /* control fondo imagen; */
-    /* background-image: url("../img/fondo/f4.jpg"); */
+    background-image: url("../img/fondo/joker.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
