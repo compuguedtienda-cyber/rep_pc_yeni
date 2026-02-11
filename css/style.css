@@ -381,3 +381,21 @@ body{
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
+
+
+
+
+/* css para mapa.html */
+.avatar{ /*Control Logo*/
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    /* border:4px solid #fff; */
+    border: none;
+    object-fit: cover;
+}
+
+.header h1{ /*Texto COMPUGUED*/
+    margin:8px 0 4px;
+    font-size: 22px;
+}
