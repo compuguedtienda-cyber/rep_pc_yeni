@@ -40,20 +40,16 @@
 
  /* ===== HEADER ===== */
  .header {
-   /* background:linear-gradient(135deg,#2b2f77,#ffa963); 2 colores fondo encabezado phone  */
-   /* padding:30px 20px 80px; Clave para responsiva */
-   padding: 1px;
+  padding: 1px;
    margin-top: 1px;
    text-align: center;
    color: #ffffff;
  }
 
- .avatar {
-   /*Control Logo*/
+ .avatar {/*Control Logo*/
    width: 80px;
    height: 80px;
    border-radius: 50%;
-   /* border:4px solid #fff; */
    border: none;
    object-fit: cover;
  }
@@ -67,8 +63,7 @@
  .header p {
    /*Descripcion Breve*/
    font-size: 15px;
-   /* font-weight: bold; */
-   /* opacity:.9; */
+   
  }
 
  .titulo-principal {
@@ -86,7 +81,7 @@
  }
 
  .action {
-   background: rgb(0, 0, 0);
+   background: rgb(23, 58, 214);
    color: #fff;
    text-decoration: none;
    border-radius: 15px;
@@ -121,7 +116,7 @@
  .btn {
    position: relative;
    text-decoration: none;
-   color: #fff;
+   color: #ffffff;
    transition: color 350ms ease-in-out, background-color 350ms ease-in-out;
    animation: bouncy 3s infinite linear;
  }
@@ -338,7 +333,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+   box-shadow: 0 8px 20px rgba(15, 128, 65, 0.2);
    transition: .3s;
 
  }
