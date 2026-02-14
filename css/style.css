@@ -29,13 +29,23 @@ body{
 .phone{ /*toda la estructura*/
     width:100%;
     max-width:420px;
-    /* background:#15c40f; color fondo verde*/
-    /* border-radius:35px; */
+    border-radius:1rem;
     overflow:hidden;
-    /* box-shadow:0 30px 70px rgba(187, 184, 184, 0.45); */
-     /*color sombra borde*/
-     /* background-color: rgb(228, 61, 219); */
+    box-shadow:0 10px 10px rgba(187, 184, 184, 0.45);
+    margin: 1rem;
+    border: 2px solid #190af0; /* grosor | estilo | color */
+     
 }
+
+.contorno{ 
+    width:100%;
+    max-width:420px;
+    border-radius:1rem;
+    overflow:hidden;
+    /* background-color: rgb(14, 168, 143); */
+    padding: 1rem;
+}
+
 
 /* ===== HEADER ===== */
 .header{
@@ -163,7 +173,7 @@ body{
 /* SLIDER */
 .slider {
   position: relative;
-  margin-top: 0;
+  
 }
 
 .slider-window {
@@ -269,8 +279,8 @@ body{
       background:var(--card);
       border-radius: 1rem;
       color:var(--text);
-      width:35px;
-      height:35px;
+      width:38px;
+      height:38px;
       border-radius:50%;
       display:flex;
       align-items:center;
@@ -281,7 +291,7 @@ body{
     }
 
   .icon-btn i{
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
 
       .icon-btn:hover{
@@ -299,7 +309,7 @@ body{
 }
 
 /* ANIMATIONS */
-.sunny{
+/* .sunny{
   animation:pulse 2.5s ease-in-out infinite;
 }
 
@@ -319,7 +329,7 @@ body{
 @keyframes rainMove{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(3px)}
-}
+} */
 
 
 footer{

@@ -199,10 +199,3 @@ updateWeather();
 
 /* Actualizar cada 10 minutos */
 setInterval(updateWeather, 600000);
-
-
-
-/* IR A MAPA */
-function goToMap(){
-  window.location.href = 'mapa2.html';
-}
