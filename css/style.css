@@ -37,14 +37,7 @@ body{
      
 }
 
-.contorno{ 
-    width:100%;
-    max-width:420px;
-    border-radius:1rem;
-    overflow:hidden;
-    /* background-color: rgb(14, 168, 143); */
-    padding: 1rem;
-}
+
 
 
 /* ===== HEADER ===== */
