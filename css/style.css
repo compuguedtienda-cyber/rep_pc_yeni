@@ -32,7 +32,7 @@ body{
     border-radius:1rem;
     overflow:hidden;
     box-shadow:0 10px 10px rgba(187, 184, 184, 0.45);
-    margin: 1rem;
+    /* margin: 1rem; */
     border: 2px solid #190af0; /* grosor | estilo | color */
      
 }
